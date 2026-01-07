@@ -385,6 +385,13 @@
 
 /* Responsive Design */
 @media (max-width: 768px) {
+  .search {
+    display: none;
+  }
+  .app {
+    width: 100%;
+    overflow-x: hidden;
+  }
   .side-bar {
     transform: translateX(-100%);
     transition: transform 0.3s;
