@@ -10,6 +10,7 @@ import Dashboard from './components/Dashboard';
 import CompletedTasks from './components/CompletedTasks';
 import AddTask from './components/AddTask';
 import Reports from './components/Reports'
+import Settings from './components/Settings'
 
 
 
@@ -30,6 +31,7 @@ function App() {
             <Route path='/pendingtasks' element={<PendingTasks />} />
             <Route path='/overduetasks' element={<OverdueTasks />} />
             <Route path='/reports' element={<Reports />} />
+            <Route path='./settings' element={<Settings />} />
           </Routes>
         </div>
       </div>
