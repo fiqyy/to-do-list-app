@@ -31,7 +31,7 @@ function App() {
             <Route path='/pendingtasks' element={<PendingTasks />} />
             <Route path='/overduetasks' element={<OverdueTasks />} />
             <Route path='/reports' element={<Reports />} />
-            <Route path='./settings' element={<Settings />} />
+            <Route path='/settings' element={<Settings />} />
           </Routes>
         </div>
       </div>
