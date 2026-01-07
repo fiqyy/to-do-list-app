@@ -1,38 +1,424 @@
-.App {
-  text-align: center;
+:root {
+  --header-bg: #1f3f73;
+  --header-text: #ffffff;
+
+  --sidebar-bg: #15325c;
+  --sidebar-active: #264b82;
+  --sidebar-hover: #315b9f;
+  --sidebar-text: #f4f7ff;
+  --sidebar-text-muted: #a9b8d6;
+
+  --dashbar-bg: #315b9f;
+  --dashbar-text: #fdfdff;
+  --dashbar-accent:#5688b1;
+
+;
+
+  --card-bg: #ffffff;
+  --card-border: #dde4f5;
+  --card-shadow: 0 4px 10px rgba(16, 31, 63, 0.15);
+  --card-title: #15325c;
+
+  --tag-success: #2ecc71;
+  --tag-warning: #f1c40f;
+  --tag-danger: #e74c3c;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Header Styles */
+.header {
+  background-color: var(--header-bg);
+  min-height: 60px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: var(--header-text);
+  padding: 0 20px;
+  position: relative;
+}
+.logo {
+  height: 40px;
+  margin-right: 8px;
+  
+}
+.logo:hover {
+  transform: scale(1.1);
+}
+.name {
+  flex: 1;
+  font-weight: bold;
+}
+.search {
+  margin-left: 40px;
+  padding: 5px 10px;
+  font-size: 1em;
+  border: none;
+  border-radius: 4px;
+}
+.search:focus {
+  outline: none;
+  box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+  border: 1px solid rgba(81, 203, 238, 1);
+}
+.menu-button {
+  margin-left: 20px;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Side Bar Styles */
+.side-bar {
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
+  width: 200px;
+  background-color: var(--sidebar-bg);
+  height: 100%;
+  position: fixed;
+  box-shadow: 5px 0 5px rgba(0,0,0,0.1);
+}
+.side-bar ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  list-style-type: none;
+  padding: 0;
+  color: var(--sidebar-text);
+}
+.side-bar ul li {
+  padding: 15px 20px;
+  border-bottom: 1px solid var(--sidebar-active);
+  cursor: pointer;
+}
+.side-bar ul li a {
+  text-decoration: none;
+  color: var(--sidebar-text);
+  display: block;
+}
+.side-bar ul li:hover {
+  background-color: var(--sidebar-hover);
+}
+.side-bar ul li.active {
+  border-left: 4px solid #fff;
+  background-color: var(--sidebar-active);
+}
+.side-bar ul li:last-child {
+  margin-top: auto;
+  border-top: 1px solid #444;
+}
+
+/* Dashboard Content Styles */
+.dashboard {
+  display:flex;
+  flex-direction: column;
+  margin-left: 200px;
+  padding: 5px;
+}
+.dash-header {
+  background-color: var(--dashbar-bg);
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  margin-bottom: 20px;
+}
+.dash-header nav ul {
+  display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  text-decoration: none;
+  list-style: none;
+  padding: 0;
+  gap: 300px;
+}
+.dash-header nav ul li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  list-style: none;
+}
+.dash-header nav ul li a {
+  color: var(--dashbar-text);
+  text-decoration: none;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+}
+.dash-header nav ul li:hover {
+  transition: transform 0.2s;
+  transform: scale(1.05);
+  background-color: var(--dashbar-accent);
+}
+
+/* Dashboard Cards Styles */
+.dash-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin: 100px 20px 0 20px;
+}
+.dash-card {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  padding: 30px;
+  box-shadow: var(--card-shadow);
+  border-radius: 8px;
+  border-color: var(--card-border);
+  background-color: var(--card-bg);
+  color: var(--card-title);
+}
+.dash-card:hover {
+  transform: scale(1.02);
+  transition: transform 0.2s;
+}
+.card-title {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-bottom: 10px;
+  border-bottom: 1px solid var(--card-title);
+  color: var(--card-title);
+}
+.card-content {
+  text-align: center;
+}
+.card-content h2,
+.card-content p {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: bolder;
+  color: var(--tag-success);
+}
+.card-content2 h2,
+.card-content2 p {
+  display:flex;
+  justify-content: center;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: bolder;
+  color: var(--tag-warning);
+}
+.card-content3 h2,
+.card-content3 p {
+  display:flex;
+  justify-content: center;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: bolder;
+  color: var(--tag-danger);
+}
+
+/* Add Task Container */
+.add-task-container {
+  margin-left: 220px;
+  margin-right: 20px;
+  margin-top: 80px;
+  padding: 20px;
+  background-color: var(--card-bg);
+  border-radius: 8px;
+  box-shadow: var(--card-shadow);
+  border: 1px solid var(--card-border);
+  color: var(--card-title);
+}
+.add-task-container .title {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.add-task-container .title h2 {
+  color: var(--card-title);
+  font-size: 1.5em;
+  font-weight: bold;
+}
+.add-task-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin: 0;
+}
+.add-task-form label {
+  display: block;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+.add-task-form input,
+.add-task-form select {
+  width: 200px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  display: block;
+  margin: 0 auto;
+}
+.add-task-form button {
+  width: 150px;
+  padding: 10px;
+  background-color: var(--dashbar-bg);
   color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin: 10px auto 0;
+}
+.add-task-form button:hover {
+  background-color: var(--dashbar-accent);
 }
 
-.App-link {
-  color: #61dafb;
+/* All Tasks Styles */
+.all-tasks-container {
+  margin-left: 220px;
+  margin-right: 20px;
+  margin-top: 10px;
+  padding: 20px;
+  background-color: var(--card-bg);
+  border-radius: 8px;
+  box-shadow: var(--card-shadow);
+  border: 1px solid var(--card-border);
+  color: var(--card-title);
+}
+.all-tasks-container .title {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.task-card {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid var(--card-border);
+}
+.task-card:last-child {
+  border-bottom: none;
+}
+.task-title {
+  margin-left: 10px;
+  font-weight: bold;
+  color: var(--card-title);
+}
+.task-card input[type="checkbox"] {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid var(--card-border);
+  cursor: pointer;
+  position: relative;
+}
+.task-card input[type="checkbox"]:checked {
+  background-color: var(--tag-success);
+  border-color: var(--tag-success);
+}
+.task-card input[type="checkbox"]:checked::after {
+  content: '✓';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* Completed Tasks Styles */
+.completed-tasks-container {
+  margin-left: 220px;
+  margin-right: 20px;
+  margin-top: 10px;
+  padding: 20px;
+  background-color: var(--card-bg);
+  border-radius: 8px;
+  box-shadow: var(--card-shadow);
+  border: 1px solid var(--card-border);
+  color: var(--card-title);
+}
+.completed-tasks-container .title {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Pending Tasks Styles */
+.pending-tasks-container {
+  margin-left: 220px;
+  margin-right: 20px;
+  margin-top: 10px;
+  padding: 20px;
+  background-color: var(--card-bg);
+  border-radius: 8px;
+  box-shadow: var(--card-shadow);
+  border: 1px solid var(--card-border);
+  color: var(--card-title);
+}
+.pending-tasks-container .title {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Overdue Tasks Styles */
+.overdue-tasks-container {
+    margin-left: 220px;
+  margin-right: 20px;
+  margin-top: 10px;
+  padding: 20px;
+  background-color: var(--card-bg);
+  border-radius: 8px;
+  box-shadow: var(--card-shadow);
+  border: 1px solid var(--card-border);
+  color: var(--card-title);
+}
+.overdue-tasks-container .title {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Reports Styles */
+.reports-container {
+  display:flex;
+  align-items: center;
+  margin-top: 80px;
+  margin-left:100px;
+}
+.reports-container .title {
+  text-align: center;
+  margin-bottom: 20px;
+  margin-left: 220px;
+  color: var(--card-title);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .side-bar {
+    transform: translateX(-100%);
+    transition: transform 0.3s;
+    z-index: 1000;
   }
-  to {
-    transform: rotate(360deg);
+  .side-bar.open {
+    transform: translateX(0);
+  }
+  .dashboard {
+    margin-left: 0;
+  }
+  .add-task-container,
+  .all-tasks-container,
+  .completed-tasks-container,
+  .pending-tasks-container,
+  .overdue-tasks-container,
+  .reports-container {
+    margin-left: 0;
+  }
+  .dash-header nav ul {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .dash-header nav ul li a {
+    padding: 5px;
+  }
+    .dash-cards {
+    grid-template-columns: 1fr;
   }
 }
+@media (max-width: 1024px) {
+  .dash-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
