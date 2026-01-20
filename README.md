@@ -17,5 +17,5 @@ Reports Page: Interactive analytics featuring a dynamic pie chart (powered by Ch
 Built with modern best practices, the app leverages React hooks for state management (e.g., useState, useEffect), localStorage for persistent data, and custom CSS modules for sleek, mobile-first styling. Future enhancements could include user authentication, cloud sync via Firebase, or team collaboration.
 
 Live Demo: https://to-do-list-app-uy9e.vercel.app/
-GitHub Repo:
+GitHub Repo:https://github.com/fiqyy/to-do-list-app
 Tech Stack: React.js, JavaScript, Chart.js, CSS Modules, Vercel.
