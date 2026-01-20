@@ -1,70 +1,21 @@
-# Getting Started with Create React App
+Fiqy's To-Do List: Smart Task Management App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Fiqy's To-Do List is a responsive, full-featured to-do list application built with React.js, designed to help users manage tasks efficiently with real-time tracking and insightful analytics. Deployed on Netlify for seamless access, this single-page app (SPA) provides a clean, intuitive interface for organizing daily workflows, whether for personal productivity, project management, or study schedules.
 
-## Available Scripts
+Key features include:
 
-In the project directory, you can run:
+All Tasks Dashboard: A centralized view of every task with quick-add functionality, editable details (title, description, due date, priority), and drag-and-drop reordering.
 
-### `npm start`
+Completed Tasks: Track achievements with strike-through visuals, completion timestamps, and archiving options to maintain a clutter-free workspace.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Pending Tasks: Focus on what's next with sortable lists by priority or due date, plus reminders to keep momentum going.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Overdue Tasks: Automated highlighting of missed deadlines in red, with one-click extensions or rescheduling to minimize stress.
 
-### `npm test`
+Reports Page: Interactive analytics featuring a dynamic pie chart (powered by Chart.js or Recharts) visualizing task distribution—e.g., completed vs. pending vs. overdue percentages—along with summary stats like completion rates and productivity trends over time.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Built with modern best practices, the app leverages React hooks for state management (e.g., useState, useEffect), localStorage for persistent data, and custom CSS modules for sleek, mobile-first styling. Future enhancements could include user authentication, cloud sync via Firebase, or team collaboration.
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Live Demo: https://to-do-list-app-uy9e.vercel.app/
+GitHub Repo:
+Tech Stack: React.js, JavaScript, Chart.js, CSS Modules, Vercel.
