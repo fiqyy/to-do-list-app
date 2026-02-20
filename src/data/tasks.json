@@ -1,50 +1,17 @@
     [
-        {
-            "id": 1,
-        "title": "Complete React Project",
-        "status": "Overdue",
-        "priority": "High",
-        "dueDate": "2024-06-15",
-        "completed" : true
+    
+    {
+
     },
     {
-        "id": 2,
-        "title": "Write Unit Tests",
-        "status": "Pending",
-        "priority": "Medium",
-        "dueDate": "2026-06-20",
-        "completed" : false
     },
     {
-        "id": 3,
-        "title": "Update Documentation",
-        "status": "Completed",
-        "priority": "Low",
-        "dueDate": "2024-06-10",
-        "completed" : false
-    },
-    {
-        "id": 4,
-        "title": "Deploy Application",
-        "status": "Pending",
-        "priority": "High",
-        "dueDate": "2026-06-25",
-        "completed" : false
+
     },
         {
-        "id": 5,
-        "title": "Second React Project",
-        "status": "Pending",
-        "priority": "High",
-        "dueDate": "2026-06-25",
-        "completed" : false
+ 
     },
     {
-        "id": 6,
-        "title": "Create Portfolio",
-        "status": "Pending",
-        "priority": "High",
-        "dueDate": "2026-06-25",
-        "completed" : false
+
     }
 ]
