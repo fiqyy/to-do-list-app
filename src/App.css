@@ -294,6 +294,8 @@
 }
 .settings-section h3 { margin: 0 0 8px 0; }
 .settings-controls { display:flex; gap:8px; align-items:center; }
+/* allow wrapping for smaller screens */
+.settings-controls { flex-wrap: wrap; }
 .settings-controls select,
 .settings-controls input[type="text"] {
   padding: 6px 8px;
@@ -471,6 +473,8 @@
   .search {
     display: none;
   }
+  /* hide the long header text on mobile */
+  .name { display: none; }
   .app {
     width: 100%;
     overflow-x: hidden;
@@ -504,6 +508,56 @@
     .dash-cards {
     grid-template-columns: 1fr;
   }
+
+    /* Login modal styles for mobile */
+    .mobile-login-button {
+      padding: 6px 10px;
+      background: #ffd166;
+      border: none;
+      border-radius: 4px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .modal-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.45);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 2000;
+      padding: 16px;
+    }
+
+    .modal {
+      background: var(--card-bg);
+      color: var(--card-title);
+      width: 100%;
+      max-width: 420px;
+      border-radius: 8px;
+      padding: 18px;
+      box-shadow: var(--card-shadow);
+      position: relative;
+    }
+
+    .modal-close {
+      position: absolute;
+      right: 8px;
+      top: 6px;
+      background: transparent;
+      border: none;
+      font-size: 22px;
+      cursor: pointer;
+    }
+
+    .modal .login-form input { width: 100%; margin-bottom: 10px; }
+    .modal .login-form button { width: 100%; }
+
+    /* Stack settings controls on small screens */
+    .settings-controls select,
+    .settings-controls button,
+    .settings-controls label { width: 100%; }
 }
 @media (max-width: 1024px) {
   .dash-cards {
