@@ -66,6 +66,13 @@
   border: none;
 }
 
+/* center spacer to create empty area in header */
+.header-center { flex: 1; }
+
+/* place auth and menu on the right with small gap */
+.auth-banner { display:flex; align-items:center; gap:8px; margin-left:0; }
+.menu-button { margin-left: 8px; }
+
 /* Auth banner / login form in header */
 .auth-banner {
   margin-left: 20px;
@@ -559,6 +566,19 @@
     .settings-controls button,
     .settings-controls label { width: 100%; }
 }
+
+  /* Ensure header keeps the same order on mobile: logo (left), spacer, auth, menu (right) */
+  @media (max-width: 768px) {
+    .header {
+      flex-direction: row;
+      align-items: center;
+    }
+    .header .logo { order: 0; }
+    .header-center { order: 1; flex: 1; }
+    .auth-banner { order: 2; display: flex; align-items: center; gap: 8px; }
+    .menu-button { order: 3; margin-left: 8px; }
+    .logo img { height: 36px; }
+  }
 
   /* Ensure modal inputs show dark text (fix white text issue on some mobile browsers) */
   .modal .login-form input {

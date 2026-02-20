@@ -26,17 +26,7 @@ export default function Header ({ setSidebarOpen, user, onLogin, onLogout }) {
                 <img className= "logo" src={logo} alt="Logo" />
             </div>
 
-            <div className='name'>
-                <p>My To Do List</p>
-            </div>
-
-            <div className='search'>
-                <input type="text" className="search" placeholder="Search tasks..." />
-            </div>
-
-            <button className="menu-button" onClick={() => setSidebarOpen(prev => !prev)}>
-                <img src="https://img.icons8.com/ios-glyphs/30/000000/menu--v1.png" alt="Menu Icon" />
-            </button>
+            <div className="header-center" />
 
             <div className="auth-banner">
                 {user && user.username ? (
@@ -75,6 +65,10 @@ export default function Header ({ setSidebarOpen, user, onLogin, onLogout }) {
                     </>
                 )}
             </div>
+
+            <button className="menu-button" onClick={() => setSidebarOpen(prev => !prev)}>
+                <img src="https://img.icons8.com/ios-glyphs/30/000000/menu--v1.png" alt="Menu Icon" />
+            </button>
         </div>
     )
 }
