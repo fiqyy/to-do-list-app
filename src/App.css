@@ -559,6 +559,18 @@
     .settings-controls button,
     .settings-controls label { width: 100%; }
 }
+
+  /* Ensure modal inputs show dark text (fix white text issue on some mobile browsers) */
+  .modal .login-form input {
+    padding: 8px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    background: #fff;
+    color: var(--card-title);
+    -webkit-text-fill-color: var(--card-title);
+  }
+  .modal .login-form input::placeholder { color: #888; }
+  .modal .login-form input[type="password"] { -webkit-text-security: disc; }
 @media (max-width: 1024px) {
   .dash-cards {
     grid-template-columns: repeat(2, 1fr);
