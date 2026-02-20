@@ -10,7 +10,7 @@ import { IoIosSettings } from "react-icons/io";
 import { TbReportAnalytics } from "react-icons/tb";
 
 
-export default function Dashboard () {
+export default function Dashboard ({ tasks = [] }) {
     const location = useLocation();
     return (
         
@@ -26,12 +26,12 @@ export default function Dashboard () {
             </div>
             
             <div className="dash-cards">
-                <DashCard1 />
-                <DashCard2 />
-                <DashCard3 />
+                <DashCard1 tasks={tasks} />
+                <DashCard2 tasks={tasks} />
+                <DashCard3 tasks={tasks} />
             </div>
                 <Routes>
-                    <Route path="/reports" element={<Reports />} />
+                    <Route path="/reports" element={<Reports tasks={tasks} />} />
                     <Route path="/settings" element={<Settings />} />
                     <Route path="addtask" element={<AddTask />} />
                 </Routes>

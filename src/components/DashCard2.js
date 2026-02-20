@@ -1,5 +1,4 @@
-import tasks from '../data/tasks.json';
-export default function DashCard2 () {
+export default function DashCard2 ({ tasks = [] }) {
     let unfinished_tasks = 0;
     const today = new Date();
     const calculate_unfinished = (task) => {

@@ -66,6 +66,64 @@
   border: none;
 }
 
+/* Auth banner / login form in header */
+.auth-banner {
+  margin-left: 20px;
+  display: flex;
+  align-items: center;
+}
+.login-form {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+.login-form input {
+  padding: 6px 8px;
+  border-radius: 4px;
+  border: 1px solid rgba(255,255,255,0.15);
+  background: rgba(255,255,255,0.03);
+  color: var(--header-text);
+}
+.login-form button {
+  padding: 6px 10px;
+  border-radius: 4px;
+  border: none;
+  background: #ffd166;
+  color: #15325c;
+  cursor: pointer;
+  font-weight: bold;
+}
+.login-form button:hover { opacity: 0.9; }
+.user-info {
+  display:flex;
+  gap:10px;
+  align-items:center;
+  background: rgba(255,255,255,0.04);
+  padding: 6px 10px;
+  border-radius: 6px;
+}
+.user-info button {
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.15);
+  color: var(--header-text);
+  padding: 6px 8px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Delete button inside task cards */
+.delete-button {
+  background: transparent;
+  border: none;
+  margin-left: auto;
+  cursor: pointer;
+  padding: 6px;
+}
+.delete-button img {
+  filter: invert(0.1) sepia(1) saturate(8) hue-rotate(-20deg) brightness(0.9);
+}
+.delete-button:hover img { transform: scale(1.05); }
+
 /* Side Bar Styles */
 .side-bar {
   display: flex;
@@ -220,6 +278,31 @@
   border: 1px solid var(--card-border);
   color: var(--card-title);
 }
+.settings-container {
+  margin-left: 220px;
+  padding: 20px;
+  background-color: var(--card-bg);
+  border-radius: 8px;
+  box-shadow: var(--card-shadow);
+  border: 1px solid var(--card-border);
+  color: var(--card-title);
+  margin-top: 20px;
+}
+.settings-section {
+  padding: 16px;
+  border-bottom: 1px solid var(--card-border);
+}
+.settings-section h3 { margin: 0 0 8px 0; }
+.settings-controls { display:flex; gap:8px; align-items:center; }
+.settings-controls select,
+.settings-controls input[type="text"] {
+  padding: 6px 8px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+.settings-controls button { padding: 8px 12px; border-radius:6px; background:var(--dashbar-bg); color:#fff; border:none; cursor:pointer }
+.settings-controls button:hover { background:var(--dashbar-accent) }
+.settings-message { margin-top:10px; color: var(--card-title); font-weight:600 }
 .add-task-container .title {
   text-align: center;
   margin-bottom: 20px;

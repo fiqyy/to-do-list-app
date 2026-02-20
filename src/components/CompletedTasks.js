@@ -1,5 +1,4 @@
-import tasks from '../data/tasks.json';
-export default function CompletedTasks() {
+export default function CompletedTasks({ tasks = [], onToggleComplete }) {
     const completedTasks = tasks.filter(task => task.completed === true);
 
     return (
@@ -15,7 +14,7 @@ export default function CompletedTasks() {
                         <input
                             type="checkbox"
                             checked={task.completed}
-                            readOnly
+                            onChange={() => onToggleComplete && onToggleComplete(task.id)}
                             id={`completed-task-${task.id}`}
                         />
                         <label htmlFor={`completed-task-${task.id}`} className="task-title">{task.title}</label>

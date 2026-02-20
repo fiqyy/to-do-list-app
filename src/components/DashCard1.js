@@ -1,5 +1,4 @@
-import tasks from '../data/tasks.json';
-export default function DashCard1 () {
+export default function DashCard1 ({ tasks = [] }) {
     const finished_tasks = tasks.filter(task => task.completed === true);
 
     

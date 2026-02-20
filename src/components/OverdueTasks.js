@@ -1,5 +1,4 @@
-import tasks from '../data/tasks.json'
-export default function OverdueTasks () {
+export default function OverdueTasks({ tasks = [], onToggleComplete }) {
     const today = new Date();
     const overduetasks = tasks.filter(task => !task.completed && new Date(task.dueDate) < today);
 
@@ -14,7 +13,7 @@ export default function OverdueTasks () {
         ) : (
         overduetasks.map(task => (
           <div key={task.id} className="task-card">
-            <input type="checkbox" checked={false} />
+            <input type="checkbox" checked={!!task.completed} onChange={() => onToggleComplete && onToggleComplete(task.id)} />
             <span className="task-title">{task.title} - Due: {new Date(task.dueDate).toLocaleDateString()}</span>
             </div>
         ))

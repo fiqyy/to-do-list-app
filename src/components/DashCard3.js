@@ -1,5 +1,4 @@
-import tasks from '../data/tasks.json';
-export default function DashCard3 () {
+export default function DashCard3 ({ tasks = [] }) {
     let overDue_tasks = 0;
     const today = new Date();
     const calculate_overdue = (task) => {
